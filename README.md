@@ -41,6 +41,10 @@ Like the desktop app, it is anonymous by design: a key identifies only itself, n
 
 Requirements: Android 8.0 or later.
 
+**If the installation does not start from the browser**, save the APK first (it goes to the *Downloads* folder), then open it from your phone's file manager app (*Files*, *File Manager*…) and allow that app to install unknown apps when asked.
+
+**Android may warn you before installing.** Google Play Protect (or your phone maker's security check) warns about apps that do not come from the Play Store and whose developer it does not know yet. This is expected for a new app distributed on GitHub. You can let it scan the app and then continue the installation. Don't turn off Play Protect to install FSS Mobile. If you want to be sure the APK is the official one, verify it as described below.
+
 **Updates** install over the previous version and keep your key, contacts and settings, as long as they are signed with the same release key (see below). You can also track new releases automatically with an app such as [Obtainium](https://github.com/ImranR98/Obtainium), pointing it at this repository.
 
 > **Never uninstall to update.** Uninstalling the app, or clearing its data, permanently deletes your private key and your contacts. They are deliberately excluded from phone backups. Before uninstalling for any reason, use **My key → Export private key** and **Contacts → Back up contacts**.
@@ -68,9 +72,15 @@ gpg --verify FSS_Mobile_0.5.3.apk.sha256.asc FSS_Mobile_0.5.3.apk.sha256
 ```
 
 ```powershell
-# Windows (PowerShell): the two hashes must be identical
+# Windows (PowerShell)
+# 1. The two hashes must be identical
 (Get-FileHash FSS_Mobile_0.5.3.apk -Algorithm SHA256).Hash
 Get-Content FSS_Mobile_0.5.3.apk.sha256
+
+# 2. Check the GPG signature (requires Gpg4win: https://gpg4win.org)
+gpg --import fssmobile.asc
+gpg --fingerprint mariano@peluso.me               # must show the fingerprint above
+gpg --verify FSS_Mobile_0.5.3.apk.sha256.asc FSS_Mobile_0.5.3.apk.sha256
 ```
 
 GnuPG prints "Good signature from Mariano Peluso" and, unless you have certified the key yourself, a warning that the key is not trusted. That warning is expected: what matters is that the fingerprint matches.
