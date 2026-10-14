@@ -1,0 +1,29 @@
+# --- Signing keys: NEVER commit these ---
+*.jks
+*.keystore
+*.p12
+*.pk8
+
+# --- Build output ---
+source/build/
+*.apk
+*.idsig
+*.dex
+*.flat
+
+# --- Release files go on the GitHub Releases page only, never in the repository ---
+Release/
+*.sha256
+*.sha256.asc
+
+# --- Data that could contain keys or messages ---
+*.pem
+*.rsa
+*.aes
+
+# --- OS / editor cruft ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
