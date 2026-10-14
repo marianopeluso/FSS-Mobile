@@ -43,7 +43,7 @@ Requirements: Android 8.0 or later.
 
 **If the installation does not start from the browser**, save the APK first (it goes to the *Downloads* folder), then open it from your phone's file manager app (*Files*, *File Manager*…) and allow that app to install unknown apps when asked.
 
-**Android may warn you before installing.** Google Play Protect (or your phone maker's security check) warns about apps that do not come from the Play Store and whose developer it does not know yet. This is expected for a new app distributed on GitHub. You can let it scan the app and then continue the installation. Don't turn off Play Protect to install FSS Mobile. If you want to be sure the APK is the official one, verify it as described below.
+**Android may warn you before installing.** Google Play Protect (or your phone maker's security check) warns about apps that do not come from the Play Store and whose developer it does not know yet. This is expected for a new app distributed on GitHub. You can let it scan the app and then continue the installation. **Don't turn off Play Protect to install FSS Mobile. If you want to be sure the APK is the official one, verify it as described below.**
 
 **Updates** install over the previous version and keep your key, contacts and settings, as long as they are signed with the same release key (see below). You can also track new releases automatically with an app such as [Obtainium](https://github.com/ImranR98/Obtainium), pointing it at this repository.
 
