@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Security vulnerability
+    url: https://github.com/marianopeluso/FSS-Mobile/security/advisories/new
+    about: Please report security issues privately, not as a public issue.
+  - name: File Secure Suite (desktop app)
+    url: https://github.com/marianopeluso/FileSecureSuite
+    about: Questions about the desktop app go to its own repository.
